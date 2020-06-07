@@ -29,8 +29,10 @@ Contains all relevant code and progress of code development.
 
 
 ### Built with:
+```
 * [HTML] 
 * [CSS]
 * [JavaScript]
 * [PHP]
+```
 
