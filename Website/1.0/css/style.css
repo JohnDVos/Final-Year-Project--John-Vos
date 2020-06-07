@@ -1,0 +1,318 @@
+/* -------------------------- Top menu formating -------------------------- */
+.webpageHeader  {                                                               /* Formats entire header tag */
+    width:                  calc(100% - 30px);                                  /* Auto calculates the padding between menu links and log in form */
+    height:                 60px;
+    padding:                0 15px;                                             /* Adds top & bottom padding of 0 and right & left padding of 15px */
+    background-color:       #FFF;                                               /* Adds a gray  background colour */
+    display:                flex;                                               /* Displays an element as a block-level flex container */
+    flex-direction:         row;                                                /* Sets the direction of the flex attribute to be in a row */
+    justify-content:        space-between;                                      /* Positionis items witha  space inbetween */
+    align-items:            center;                                             /* Centers log in form to be centre (vertically ) of menu box */          
+}
+/* -------- Formats menu portion of header -------- */
+.nav-header-main {
+  height:                   80%;
+  display:                  flex;
+  flex-direction:           row;
+}
+.header-logo {
+  width:                    48px;
+  padding-right:            20px;
+}
+.nav-header-main img {
+  height:                   100%;
+}
+.nav-header-main ul {
+  height:                   100%;
+}
+.nav-header-main ul li {
+  list-style:               none;
+  float:                    left;
+  height:                   100%;
+}
+.nav-header-main ul li a {
+  display:                  block;
+  height:                   100%;
+  padding:                  0 10px;
+  border-radius:            6px;
+  line-height:              48px;
+  font-family:              arial;
+  font-size:                16px;
+  color:                    #111;
+  text-transform:           uppercase;
+}
+
+/* -------- Formats log-in portion of header -------- */
+.header-login {
+  height:                   60%;
+  display:                  flex;
+  flex-direction:           row;
+}
+.header-login form {
+  height:                   100%;
+}
+.header-login form input {
+  height:                   100%;
+  width:                    160px;
+  padding:                  0 15px;
+  border:                   none;
+  border-radius:            4px;
+  background-color:         #F6F6F6;
+  float:                    left;
+  margin-left:              8px;
+  font-family:              arial;
+}
+.header-login form button {
+  height:                   100%;
+  padding:                  0 10px;
+  border:                   none;
+  border-radius:            4px;
+  background-color:         #333;
+  margin-left:              8px;
+  font-family:              arial;
+  font-size:                13px;
+  color:                    #FFF;
+  text-transform:           uppercase;
+  text-align:               center;
+}
+.header-signup {
+  height:                   100%;
+  width:                    70px;
+  padding:                  0 6px;
+  border:                   none;
+  border-radius:            4px;
+  margin-left:              8px;
+  font-family:              arial;
+  font-size:                13px;
+  line-height:              36px;
+  color:                    #111;
+  text-transform:           uppercase;
+  text-align:               center;
+}
+
+/* --------------------------- General formating --------------------------- */
+* {
+  margin:                   0;
+  padding:                  0;
+  text-decoration:          none;
+}
+
+button {
+  cursor:                   pointer;
+}
+
+body {
+  background-color:         #F3F3F3;
+}
+
+.wrapper-main {
+  width:                    75%;
+  margin:                   0 auto;
+}
+main {
+  padding-top:              20px;
+}
+
+.section-default {
+  width:                    100%;
+  padding:                  20px;
+  border-radius:            6px;
+  background-color:         #FFF;
+}
+
+.login-status {
+  text-align:               center;
+  font-size:                26px;
+  font-family:              arial;
+  color:                    #111;
+}
+
+/* -------- Header tags -------- */
+h1 {
+    text-align:             center;
+    font-size:              26px;
+    font-family:            arial;
+    color:                  #111;
+}
+h2 {
+    font-size:              20px;
+    font-family:            arial;
+    color:                  #111;
+    margin-left:            0px;
+}
+h3 {
+    font-size:              16px;
+    font-family:            arial;
+    color:                  #111;
+    margin-left:            0px;
+}
+
+/* -------- text formating -------- */
+p {
+    margin:                 10px 0;                                             /* top / bottom,  right / left margin */
+    text-align:             justify;
+    text-justify:           inter-word;
+}
+
+ol {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+ol li {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+ul {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+ul li {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* ------------------------- Sign up page formating ------------------------- */
+
+.form-signup {
+  margin:                   0 auto;
+  padding-top:              20px;
+  width:                    200px;
+}
+
+.form-signup input {
+  width: calc(100% - 30px);
+  height: 30px;
+  padding: 0 15px;
+  margin-bottom: 6px;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  background-color: #F6F6F6;
+  float: left;
+  font-family: arial;
+}
+
+.form-signup button {
+  display: block;
+  height: 40px;
+  padding: 0 10px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  font-family: arial;
+  font-size: 13px;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+}
+.signuperror {
+  padding-top: 14px;
+  font-family: arial;
+  font-size: 16px;
+  color: red;
+  text-align: center;
+}
+
+.signupsuccess {
+  padding-top: 14px;
+  font-family: arial;
+  font-size: 16px;
+  color: green;
+  text-align: center;
+}
+
+/* -------------------------- Side menu formating -------------------------- */
+.sidebar {                                                                      /* Formats entire sidebar */
+  margin: 0;
+  padding: 0;
+  width: 200px;                                                                 /* Sets correct width for content */
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  font-family: arial;
+  top: 15%;
+}
+
+.sidebar a {                                                                    /* Formats sidebar content */
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.sidebar a:hover:not(.active) {                                                 /* Formats sidebar on hover */
+  background-color: #555;   
+  color: white;
+}
+
+/* ------------------------------ Table Styles ------------------------------ */
+table {
+    margin: 0 auto;
+    width: 100%
+}
+table, th, td {
+    border-collapse: collapse;
+}
+th {
+    background-color: #6495ED;
+    color: white;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* --------------------------- Back To Top Button --------------------------- */
+#myBtn {
+  display: none;                                                                /* Hidden by default */
+  position: fixed;                                                              /* Fixed/sticky position */
+  bottom: 20px;                                                                 /* Place the button at the bottom of the page */
+  right: 30px;                                                                  /* Place the button 30px from the right */
+  z-index: 99;                                                                  /* Make sure it does not overlap */
+  border: none;                                                                 /* Remove borders */
+  outline: none;                                                                /* Remove outline */
+  background-color: #333;                                                       /* Set a background color */
+  color: white;                                                                 /* Text color */
+  cursor: pointer;                                                              /* Add a mouse pointer on hover */
+  padding: 15px;                                                                /* Some padding */
+  border-radius: 10px;                                                          /* Rounded corners */
+  font-size: 18px;                                                              /* Increase font size */
+}
+
+#myBtn:hover {                                                                  /* When user hovers over buttone */
+  background-color: #ddd;                                                       /* Sets background colour to gray when hovered */
+  color: black;                                                                 /* Sets colour to black when not on hover */
+}
+
+/* ------------------------------ Media Queries ------------------------------ */
+/*
+*           Mobile screen size:
+*           Tablet screen size:
+*           Computer screen size:
+*/
+
+@media screen and (max-width: 700px) {
+    
+    /* -------- Side Bar formating -------- */
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .sidebar a {
+        float: left;
+    }
+    .content {
+        margin-left: 0;
+    }
+    
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}

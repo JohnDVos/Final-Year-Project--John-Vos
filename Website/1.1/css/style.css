@@ -1,0 +1,201 @@
+/* -------------------------- Top menu formating -------------------------- */
+.topnav {                                                                       /* Styles entire header menu */
+    overflow:               hidden;
+    background-color:       #FFF;                                               /* Adds a gray  background colour */
+    border-radius:          6px;                                                /* Rounds off edges of border */
+}
+.topnav a {                                                                     /* Styles text portion (links) of header */
+    float:                  left;                                               /* Alligns text to the left */
+    display:                block;
+    color:                  #111;                                               /* Makes text black */
+    padding:                14px 16px;
+    font-family:            arial;
+    font-size:              16px;
+    text-transform:         uppercase;                                          /* Makes text all UPPERCASE */
+    text-decoration:        none;                                               /* Removes text decoration, e.g. underline */
+    text-align:             center;
+}
+.topnav a:hover {
+    background-color:       #ddd;
+    color:                  black;
+    border-radius:          6px;                                                /* Rounds off edges of border */
+}
+.topnav .icon { 
+    display:                 none;                                              /* Hides the icon (only visible on smaller screens) */
+}
+
+.subnav {
+    overflow:               hidden;
+    float:                  left;
+    background-color:       #FFF;                                               /* Adds a gray  background colour */
+    border-radius:          6px;  
+}
+.subnav .subnavbtn {
+    text-decoration:        none;
+    background-color:       #FFF;
+    border:                 none;                                               /* Removes border inherited from being a button */
+    outline:                none;
+    margin:                 0;
+}
+.subnav-content {
+  display:                  none;
+  position:                 absolute;
+  left:                     0;
+  background-color:         #FFF;
+  width:                    100%;
+  z-index:                  1;
+}
+.subnav-content a {
+  float:                    left;
+  color:                    black;
+  text-decoration:          none;
+}
+.subnav-content a:hover {
+  background-color:         #ddd;;
+  color:                    black;
+}
+.subnav:hover .subnav-content {
+  display:                  block;
+}
+
+/* -------------------------- Side menu formating -------------------------- */
+.sidebar {                                                                      /* Formats entire sidebar */
+    background-color:        #FFF;
+    position:                fixed;
+    overflow:                auto;
+    font-family:             arial;
+    padding:                 10px 10px;                                        /* Sets correct padding for content */
+    border-radius:           10px;                                             /* Rounds off edges of border */
+    top:                     150px;
+}
+
+.sidebar a {                                                                    /* Formats sidebar content */
+    display:                 block;
+    color:                   black;
+    padding:                 16px;
+    text-decoration:         none;
+}
+.sidebar a:hover:not(.active) {                                                 /* Formats sidebar on hover */
+    background-color:        #555;   
+    color:                   white;
+}
+
+/* --------------------------- General formating --------------------------- */
+/* -------- Main content -------- */
+body {
+  background-color:         #F3F3F3;
+}
+main {
+  padding-top:              20px;
+  background-color:         #F3F3F3;
+}
+
+.wrapper-main {
+  width:                    75%;
+  margin:                   0 auto;
+  padding:                  20px;
+  border-radius:            10px;
+  background-color:         #FFF;
+}
+
+p {
+    text-align:             justify;                                            /* Sets alignement of text to justify */
+    text-justify:           inter-word;                                         /* Makes the text justify according to space between word (increase or decrease) */
+}
+
+/* -------- Header tags -------- */
+h1 {
+    text-align:             center;
+    font-size:              26px;
+    font-family:            arial;
+    color:                  #111;
+}
+h2 {
+    font-size:              20px;
+    font-family:            arial;
+    color:                  #111;
+    margin-left:            0px;
+}
+h3 {
+    font-size:              16px;
+    font-family:            arial;
+    color:                  #111;
+    margin-bottom:          5px;
+    margin-top:             15px;
+}
+
+/* -------- Bullter pints -------- */
+ol {                                                                            /* Ordered list formating */
+    padding-top:            5px;
+    margin:                 0;                                                  /* Removes margin */
+}
+
+/* ------------------------------ Table Styles ------------------------------ */
+table {
+    margin:                 0 auto;
+    width:                  100%
+}
+table, th, td {
+    border-collapse:        collapse;
+}
+th {
+    background-color:       #6495ED;
+    color:                  white;
+}
+th, td {
+    padding:                5px;
+    text-align:             left;
+    border-bottom:          1px solid #ddd;
+}
+
+/* ------------------------------ Media Queries ------------------------------ */
+/*                                                                          *
+*           Mobile screen size:             1000px                          *
+*           Tablet screen size:             750px                           *
+*           Computer screen size:           600px                           *
+* ---------------------------------------------------------------------------- */
+
+/*  If the screen is less than 600px wide: 
+*       -   all links are hinden except for first one (child).
+*       -   topnav opens & closes to show links.
+*/
+@media screen and (max-width: 600px) {
+
+    /* --- Topnav menu formating --- */
+    .topnav a:not(:first-child) {
+        display:            none;
+    }
+    .topnav a.icon {
+        float:              right;
+        display:            block;
+    }
+    
+    .wrapper-main {
+        width: 85%;
+    }
+    
+    .sidebar {
+        display: none;
+    }
+}
+
+/*  Adds the "responsive" class JS to the topnav: 
+*       -   activated when user clicks on the icon.
+*       -   displays vertically instead of horizontally.
+*/
+@media screen and (max-width: 600px) {
+    /* --- Topnav menu formating --- */
+    .topnav.responsive {
+      position:             relative;
+    }
+    .topnav.responsive .icon {
+        position:           absolute;
+        right:              0;
+        top:                0;
+    }
+    .topnav.responsive a {
+        float:              none;
+        display:            block;
+        text-align:         left;
+    }
+}

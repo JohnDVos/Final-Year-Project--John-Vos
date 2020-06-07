@@ -1,0 +1,129 @@
+/* -------------------------- Top menu formating -------------------------- */
+/* -- Menu formating for when burger menu icon hasn't been clicked -- */
+.topnav {                                                                       /* Styles entire header menu. */
+    overflow: hidden;
+    background-color:       #FFF;;                                               /* Adds a gray  background colour. */
+    border-radius:          6px;                                                /* Rounds off edges of border. */
+}
+.topnav a {                                                                     /* Styles text portion (links) of header. */
+ float:                  left;                                               /* Alligns text to the left */
+    display:                block;
+    color:                  #111;                                               /* Makes text black */
+    padding:                14px 16px;
+    font-family:            arial;
+    font-size:              16px;
+    text-transform:         uppercase;                                          /* Makes text all UPPERCASE */
+    text-decoration:        none;                                               /* Removes text decoration, e.g. underline */
+    text-align:             center;
+}
+
+.topnav a:not(:first-child) {
+    display:                none;                                                       /* Hides all menu links except for the first link. */
+}
+
+/* -- Menu formating for when burger menu icon has been clicked -- */
+.topnav a.icon {                                                                /* Formats the burger menu icon (if removed menu icon disapears). */
+    float:                  right;
+    display:                block;
+}
+  
+.topnav.responsive {                                                            /* Mobile version of menu is called topnav.responsive. */
+    position:               relative;
+}
+
+.topnav.responsive .icon {                                                      /* CSS for when button is clicked (becomes topnav icon responsive). */
+    position:               absolute;
+    right:                  0;
+    top:                    0;
+}
+
+.topnav.responsive a {                                                          /* CSS for when button is clicked for links. */
+    float:                  none;
+    display:                block;
+    text-align:             left;
+}
+
+/* -------- Side nav -------- */
+.sidebar {
+        display: none;
+    }
+
+/* --------------------------- General formating --------------------------- */
+/* -------- Main content -------- */
+
+main {
+  padding-top:              20px;
+}
+body {
+    background-color:       #F3F3F3;                                            /* Adds a gray background colour. */
+    font-family:            arial;
+}
+.wrapper-main {
+    padding:                20px;
+    border-radius:          10px;
+    background-color:       #FFF;
+}
+p {
+    text-align:             justify;                                            /* Sets alignement of text to justify. */
+    text-justify:           inter-word;                                         /* Makes the text justify according to space between word (increase or decrease). */
+}
+img {
+    max-width:                  100%;
+    height:                 auto;
+}
+/* -------- Header tags -------- */
+h1 {
+    text-align:             center;
+    font-size:              26px;
+    font-family:            arial;
+    color:                  #111;
+}
+h2 {
+    font-size:              20px;
+    font-family:            arial;
+    color:                  #111;
+    margin-left:            0px;
+}
+h3 {
+    font-size:              16px;
+    font-family:            arial;
+    color:                  #111;
+    margin-bottom:          5px;
+    margin-top:             15px;
+}
+
+/* ------------------------------ Table Styles ------------------------------ */
+table {
+    margin:                 0 auto;
+    width:                  100%
+}
+table, th, td {
+    border-collapse:        collapse;
+}
+th {
+    background-color:       #6495ED;
+    color:                  white;
+}
+th, td {
+    padding:                5px;
+    text-align:             left;
+    border-bottom:          1px solid #ddd;
+}
+      
+/* ------------------------------ Media Queries ------------------------------ *
+*                                                                           *
+*           Mobile screen size:             1000px                          *
+*           Tablet screen size:             750px                           *
+*           Computer screen size:           600px                           *
+* ---------------------------------------------------------------------------- */
+
+/*  If the screen is a minimum width of 1000px wide: 
+*       -   
+*       -   
+*/
+@media screen and (max-width: 1000px) {
+    .topnav .icon { 
+        display:                none;                                           /* Hides the icon (only visible on smaller screens) */
+    }
+    
+}

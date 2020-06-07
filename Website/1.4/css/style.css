@@ -1,0 +1,471 @@
+/* -------------------------- Top menu formating -------------------------- */
+/* -- Menu formating for when burger menu icon hasn't been clicked -- */
+.topnav {                                                                       /* Styles entire header menu. */
+    overflow:               hidden;
+    background-color:       #FFF;;                                               /* Adds a gray  background colour. */
+    border-radius:          6px;                                                /* Rounds off edges of border. */
+}
+.topnav a {                                                                     /* Styles text portion (links) of header. */
+    float:                  left;                                               /* Alligns text to the left */
+    display:                block;
+    color:                  #111;                                               /* Makes text black */
+    padding:                14px 16px;
+    font-family:            arial;
+    font-size:              16px;
+    text-transform:         uppercase;                                          /* Makes text all UPPERCASE */
+    text-decoration:        none;                                               /* Removes text decoration, e.g. underline */
+    text-align:             center;
+}
+
+.topnav a:not(:first-child) {
+    display:                none;                                               /* Hides all menu links except for the first link. */
+}
+.topnav .header-login {
+    display:                none;                                               /* Hides log in form until burger menu icon is clicked. */
+}
+
+/* ------- Menu formating for when burger menu icon has been clicked. ------- */
+.topnav.responsive {                                                            /* Mobile version of menu is called topnav.responsive. */
+    position:               relative;
+}
+.topnav.responsive a {                                                          /* CSS for when button is clicked for links. */
+    float:                  none;
+    display:                block;
+    text-align:             left;
+}
+
+/* --------- Log in form formating. --------- */
+.topnav.responsive .header-login {                                              /* Formats entire container for log-in. */
+    display:                block;
+    text-align:             left;
+}
+.topnav.responsive input[type=text], input[type=password] {
+    padding:                10px 14px;
+    margin-bottom:          5px;
+    display:                block;
+    border-radius:          6px; 
+    border:                 none;
+    font-family:            arial;
+    font-size:              16px;
+    text-decoration:        none;
+    background-color:       #F6F6F6;
+    margin-left:            8px;
+    color:                  #333;
+}
+.topnav.responsive #submit {                                                    /* Formats log-in button. */
+    background-color:       #333;
+    color:                  #FFF;
+    padding:                14px 16px;
+    margin-left:            5px;
+    border-radius:          4px;
+    font-size:              13px;
+}
+.topnav.responsive button {
+    background-color:       #333;
+    color:                  #FFF;
+    padding:                14px 16px;
+    margin-left:            5px;
+    border-radius:          4px;
+    font-size:              13px;
+    font-family:            arial;
+    text-transform:         uppercase;  
+}
+
+/* --------------------------- Formats burger icon --------------------------- */
+.burgerIcon {                                                                   /* Formats the burger menu icon (if removed menu icon disapears). */
+  float:                    right;
+  display:                  block;
+  padding-top:              6px;
+}
+.topnav.responsive .burgerIcon {
+    position:               absolute;
+    right:                  0;
+    top:                    0;
+}
+
+.bar1, .bar2, .bar3 {
+  width:                    35px;                                               /* Width of bars. */
+  height:                   5px;                                                /* Height of bars. */
+  background-color:         #333;
+  margin:                   5px 8px;
+  border-radius:            6px;
+}
+
+/* --------------------------- General formating --------------------------- */
+/* -------- Main content -------- */
+
+main {
+  padding-top:              20px;
+}
+body {
+    background-color:       #F3F3F3;                                            /* Adds a gray background colour. */
+    font-family:            arial;
+}
+.wrapper-main {
+    padding:                20px;
+    border-radius:          10px;
+    background-color:       #FFF;
+}
+p {
+    text-align:             justify;                                            /* Sets alignement of text to justify. */
+    text-justify:           inter-word;                                         /* Makes the text justify according to space between word (increase or decrease). */
+    margin-top:             5px;
+}
+#message {
+    text-align:             center;
+    font-size:              24px;
+}
+img {
+    max-width:              100%;
+    height:                 auto;
+}
+
+#label {
+    font-size:              16px;
+    font-weight:            bold;
+}
+#button {
+    outline:                none;
+    background-color:       #333;
+    color:                  white;
+    border-radius:          4px;
+    font-size:              14px;
+    padding:                8px 10px;
+    text-transform:         uppercase;
+    border:                 none;
+}
+
+/* ------------------- Client content------------------- */
+/* -------- Weekly update content -------- */
+.grid-weekly {
+  display:                  grid;
+  grid-template-columns:    40% 60%;
+  grid-template-rows:       1fr 1fr 1fr;
+  gap:                      5px 1px;
+  grid-template-areas:      "weight weight-form" 
+                            "notes notes-form" 
+                            "goal goal-form";
+}
+
+.weight { grid-area: weight; }
+.weight-form { grid-area: weight-form; }
+.notes { grid-area: notes; }
+.notes-form { grid-area: notes-form; }
+.goal { grid-area: goal; }
+.goal-form { grid-area: goal-form; }
+
+/* -------- Rare update content -------- */
+.grid-client {
+  display:                  grid;
+  grid-template-columns:    25% 75%;
+  grid-template-rows:       1fr 1fr 1fr 1fr 1fr 1fr;
+  gap:                      5px 1px;
+  grid-template-areas:      "gender gender-form" 
+                            "phone-numb phone-numb-form" 
+                            "country country-form" 
+                            "health health-form" 
+                            "height height-form" 
+                            "DoB DoB-form";
+}
+
+.gender { grid-area: gender; }
+.gender--form { grid-area: gender--form; }
+.phone-numb { grid-area: phone-numb; }
+.phone-numb-form { grid-area: phone-numb-form; }
+.country { grid-area: country; }
+.country-form { grid-area: country-form; }
+.health { grid-area: health; }
+.health-form { grid-area: health-form; }
+.height { grid-area: height; }
+.height-form { grid-area: height-form; }
+.DoB { grid-area: DoB; }
+.DoB-form { grid-area: DoB-form; }
+
+/* ------------------- PT content------------------- */
+/* -------- Sign up PT content -------- */
+.grid-contact {
+    display:                grid;
+    grid-template-columns:  40% 60%;
+    grid-template-rows:     1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+     gap:                   1px 1px;
+    grid-template-areas:    "info info" 
+                            "name name-form" 
+                            "email email-form" 
+                            "qualifications qualifications" 
+                            "qual-company qual-company-form" 
+                            "qual-name qual-form" "insurance insurance" 
+                            "insurance-company insurance-company-form" 
+                            "start-date start-date-form" 
+                            "end-date end-date-form" 
+                            "level-coverage level-coverage-form";
+}
+
+.info { grid-area: info; }
+.name { grid-area: name; }
+.email { grid-area: email; }
+.name-form { grid-area: name-form; }
+.email-form { grid-area: email-form; }
+.qualifications { grid-area: qualifications; }
+.qual-name { grid-area: qual-name; }
+.qual-form { grid-area: qual-form; }
+.insurance { grid-area: insurance; }
+.insurance-company { grid-area: insurance-company; }
+.insurance-company-form { grid-area: insurance-company-form; }
+.qual-company { grid-area: qual-company; }
+.qual-company-form { grid-area: qual-company-form; }
+.start-date { grid-area: start-date; }
+.start-date-form { grid-area: start-date-form; }
+.end-date { grid-area: end-date; }
+.end-date-form { grid-area: end-date-form; }
+.level-coverage { grid-area: level-coverage; }
+.level-coverage-form { grid-area: level-coverage-form; }
+
+#contact {
+    width: 100%;
+}
+
+/* -------- PT Profile content -------- */
+/****************************************************************
+      1                 2                       3               *
+*   1 |   PT name:      |                       |               *
+*   2 |   PT photo      |    Qualifcations      |   Pricing     *
+*   3 |                 |    Info               |   Insurance   *
+****************************************************************/
+.grid-profile {
+  display: grid;                                                                /* Creates the grid. */
+  grid-template-columns:    25% auto;                                           /* Makes first column (img) 25% of max size. */
+  grid-template-rows:       auto auto;                                          /* Auto layout rows. */
+  gap:                      1px 15px;                                           /* Grid padding. */
+  grid-template-areas:      "PT-name PT-name" "PT-photo PT-info";
+}
+
+.PT-name { grid-area: PT-name; }
+
+.PT-photo { grid-area: PT-photo; }
+
+.PT-info { grid-area: PT-info; }
+
+
+
+/* -------- Header tags -------- */
+h1 {
+    text-align:             center;
+    font-size:              26px;
+    font-family:            arial;
+    color:                  #111;
+}
+h2 {
+    font-size:              20px;
+    font-family:            arial;
+    color:                  #111;
+    margin-left:            0px;
+    margin-bottom:          10px;
+}
+h3 {
+    font-size:              16px;
+    font-family:            arial;
+    color:                  #111;
+    margin-bottom:          5px;
+    margin-top:             10px;
+}
+h4 {
+    font-size:              14px;
+    font-family:            arial;
+    color:                  #111;
+    margin-bottom:          5px;
+}
+
+
+/* ------------------------------ Table Styles ------------------------------ */
+table {
+    margin:                 0 auto;
+    width:                  100%
+}
+table, th, td {
+    border-collapse:        collapse;
+}
+th {
+    background-color:       #6495ED;
+    color:                  white;
+}
+th, td {
+    padding:                5px;
+    text-align:             left;
+    border-bottom:          1px solid #ddd;
+}
+
+/* ------------------------------ Signup Styles ------------------------------ */
+.form-signup {                                                                  /* Formats the sign up forms. */
+  margin:                   0 auto;
+  padding-top:              20px;
+  width:                    200px;
+}
+
+.form-signup input {
+  width:                    calc(100% - 30px);
+  height:                   30px;
+  padding:                  0 15px;
+  margin-bottom:            6px;
+  border:                   1px solid #CCC;
+  border-radius:            4px;
+  background-color:         #F6F6F6;
+  float:                    left;
+  margin-left:              0px;
+  font-size:                13px;
+}
+
+.form-signup #signup-button {
+  display:                  block;
+  width:                    100%;
+  height:                   40px;
+  padding:                  0 10px;
+  margin:                   0 auto;
+  border:                   none;
+  border-radius:            4px;
+  background-color:         #333;
+  font-family:              arial;
+  font-size:                13px;
+  color:                    #FFF;
+  text-transform:           uppercase;
+  text-align:               center;
+}
+.signuperror, .signupsucess {
+  padding-top:              5px;
+  font-family:              arial;
+  font-size:                16px;
+  color:                    red;
+  text-align:               center;
+}
+
+/* --------------------------- Back to top button ---------------------------- */
+#myBtn {
+  display:                  none;                                               /* Hidden by default */
+  position:                 fixed;                                              /* Fixed/sticky position */
+  bottom:                   20px;                                               /* Place the button at the bottom of the page */
+  right:                    20px;                                               /* Place the button 30px from the right */
+  z-index:                  99;                                                 /* Make sure it does not overlap */
+  border:                   none;                                               /* Remove borders */
+  outline:                  none;                                               /* Remove outline */
+  background-color:         #333;                                               /* Set a background color */
+  color:                    white;                                              /* Text color */
+  cursor:                   pointer;                                            /* Add a mouse pointer on hover */
+  padding:                  15px;                                               /* Some padding */
+  border-radius:            10px;                                               /* Rounded corners */
+  font-size:                18px;                                               /* Increase font size */
+}
+
+#myBtn:hover {                                                                  /* When user hovers over buttone */
+  background-color: #ddd;                                                       /* Sets background colour to gray when hovered */
+  color: black;                                                                 /* Sets colour to black when not on hover */
+}
+      
+/* ------------------------------ Media Queries ------------------------------ *
+*                                                                           *
+*           Mobile screen size:             750px                           *
+*           Computer screen size:           600px                           *
+* ---------------------------------------------------------------------------- */
+
+/*  If the screen is a minimum width of 750px wide: */
+@media only screen and (min-width: 750px) {
+/*  Makes topnav links and log in form visible  */
+    .topnav a:not(:first-child) {
+        display:            flex;
+    }
+    .topnav .header-login {
+        display:            flex;
+    }
+    
+/*  Formats topnav so links are on the left, log in on the right */
+    .topnav {
+        width:              calc(100% - 30px);
+        height:             60px;
+        padding:            0 15px;
+        background-color:   #FFF;
+        display:            flex;
+        flex-direction:     row;
+        justify-content:    space-between;
+        align-items:        center;
+    }
+    .nav-header-main {
+      height:               80%;
+      display:              flex;
+      flex-direction:       row;
+    }
+    .nav-header-main a {
+      display:              block;
+      height:               100%;
+      padding:              0 10px;
+      border-radius:        6px;
+      line-height:          48px;
+      font-family:          arial;
+      font-size:            16px;
+      color:                #111;
+      text-transform:       uppercase;
+    }
+
+/*  Formats log in of topnav  */
+    .header-login {
+      height:               60%;
+      display:              flex;
+      flex-direction:       row;
+    }
+    
+    .header-login form {
+      height:               100%;
+    }
+    
+    .header-login form input {
+      height:               100%;
+      width:                160px;
+      padding:              0 15px;
+      border:               none;
+      background-color:     #F6F6F6;
+      float:                left;
+      margin-left:          8px;
+      font-family:          arial;
+    }
+    
+    .header-login form button {
+        height:               100%;
+        padding:              0 10px;
+        border:               none;
+        border-radius:        4px;
+        background-color:     #333;
+        margin-left:          8px;
+        font-family:          arial;
+        font-size:            13px;
+        color:                #FFF;
+        text-transform:       uppercase;
+        text-align:           center;
+    }   
+
+    #signup {
+        background-color:       #333;
+        color:                  #FFF;
+        padding:                10px 10px;
+        margin-left:            5px;
+        border-radius:          4px;
+        font-size:              13px;
+    }
+    
+/* ---- Formats burger icon portion of header menu ---- */
+    .burgerIcon {
+        display:            none;
+    }
+    
+    body {
+        padding-right:      20px;
+        padding-left:       20px;
+    }
+    
+    .grid-contact {
+        grid-template-columns:  20% 80%;
+    }
+    .grid-weekly {
+        grid-template-columns:  15% 85%;
+    }
+    .grid-client {
+        grid-template-columns:  15% 85%;
+    }
+
+}

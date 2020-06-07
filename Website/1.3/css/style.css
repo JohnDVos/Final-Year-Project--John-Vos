@@ -1,0 +1,296 @@
+/* -------------------------- Top menu formating -------------------------- */
+/* -- Menu formating for when burger menu icon hasn't been clicked -- */
+.topnav {                                                                       /* Styles entire header menu. */
+    overflow:               hidden;
+    background-color:       #FFF;;                                               /* Adds a gray  background colour. */
+    border-radius:          6px;                                                /* Rounds off edges of border. */
+}
+.topnav a {                                                                     /* Styles text portion (links) of header. */
+    float:                  left;                                               /* Alligns text to the left */
+    display:                block;
+    color:                  #111;                                               /* Makes text black */
+    padding:                14px 16px;
+    font-family:            arial;
+    font-size:              16px;
+    text-transform:         uppercase;                                          /* Makes text all UPPERCASE */
+    text-decoration:        none;                                               /* Removes text decoration, e.g. underline */
+    text-align:             center;
+}
+
+.topnav a:not(:first-child) {
+    display:                none;                                               /* Hides all menu links except for the first link. */
+}
+.topnav .header-login {
+    display:                none;                                               /* Hides log in form until burger menu icon is clicked. */
+}
+
+/* -- Menu formating for when burger menu icon has been clicked. -- */
+.topnav.responsive {                                                            /* Mobile version of menu is called topnav.responsive. */
+    position:               relative;
+}
+.topnav.responsive a {                                                          /* CSS for when button is clicked for links. */
+    float:                  none;
+    display:                block;
+    text-align:             left;
+}
+
+/* -- Log in form formating. -- */
+.topnav.responsive .header-login {                                           /* Formats entire container for log-in. */
+    display:                block;
+    text-align:             left;
+}
+.topnav.responsive input[type=text], input[type=password] {                     /* Formats log in form text. */
+    padding:                14px 16px;
+    display:                block;
+    /*width:                  100%;*/
+    border-radius:          6px;     
+    font-family:            arial;
+    font-size:              16px;
+    text-decoration:        none;
+}
+
+.topnav.responsive button{                                                      /* Formats log-in button. */
+    float:                  left;
+    padding:                14px 16px;
+    color:                  #FFF;
+    background-color:       black;
+    border-radius:          6px;     
+    font-family:            arial;
+    font-size:              16px;
+    text-transform:         uppercase;                                          /* Makes text all UPPERCASE */
+    text-decoration:        none;                                               /* Removes text decoration, e.g. underline */
+    text-align:             center;
+}
+
+
+/* ------ Formats burger icon ------ */
+.burgerIcon {                                                                   /* Formats the burger menu icon (if removed menu icon disapears). */
+  float:                    right;
+  display:                  block;
+  padding-top:              6px;
+}
+.topnav.responsive .burgerIcon {
+    position:               absolute;
+    right:                  0;
+    top:                    0;
+}
+
+.bar1, .bar2, .bar3 {
+  width:                    35px;                                               /* Width of bars. */
+  height:                   5px;                                                /* Height of bars. */
+  background-color:         #333;
+  margin:                   5px 8px;
+  border-radius:            6px;
+}
+
+/* --------------------------- General formating --------------------------- */
+/* -------- Main content -------- */
+
+main {
+  padding-top:              20px;
+}
+body {
+    background-color:       #F3F3F3;                                            /* Adds a gray background colour. */
+    font-family:            arial;
+}
+.wrapper-main {
+    padding:                20px;
+    border-radius:          10px;
+    background-color:       #FFF;
+}
+p {
+    text-align:             justify;                                            /* Sets alignement of text to justify. */
+    text-justify:           inter-word;                                         /* Makes the text justify according to space between word (increase or decrease). */
+}
+img {
+    max-width:              100%;
+    height:                 auto;
+}
+.profile-photo {
+    float:                  left;
+    max-width:              25%;
+    height:                 auto;
+}
+/* -------- Header tags -------- */
+h1 {
+    text-align:             center;
+    font-size:              26px;
+    font-family:            arial;
+    color:                  #111;
+}
+h2 {
+    font-size:              20px;
+    font-family:            arial;
+    color:                  #111;
+    margin-left:            0px;
+}
+h3 {
+    font-size:              16px;
+    font-family:            arial;
+    color:                  #111;
+    margin-bottom:          5px;
+    margin-top:             15px;
+}
+h4 {
+    font-size:              14px;
+    font-family:            arial;
+    color:                  #111;
+}
+
+/* ------------------------------ Table Styles ------------------------------ */
+table {
+    margin:                 0 auto;
+    width:                  100%
+}
+table, th, td {
+    border-collapse:        collapse;
+}
+th {
+    background-color:       #6495ED;
+    color:                  white;
+}
+th, td {
+    padding:                5px;
+    text-align:             left;
+    border-bottom:          1px solid #ddd;
+}
+
+
+/* ------------------------------ Signup Styles ------------------------------ */
+.form-signup {
+  margin: 0 auto;
+  padding-top: 20px;
+  width: 200px;
+}
+
+.form-signup input {
+  width: calc(100% - 30px);
+  height: 30px;
+  padding: 0 15px;
+  margin-bottom: 6px;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  background-color: #F6F6F6;
+  float: left;
+  font-family: arial;
+}
+
+.form-signup button {
+  display: block;
+  height: 40px;
+  padding: 0 10px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  font-family: arial;
+  font-size: 13px;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+}
+.signuperror {
+  padding-top: 14px;
+  font-family: arial;
+  font-size: 16px;
+  color: red;
+  text-align: center;
+}
+
+.signupsuccess {
+  padding-top: 14px;
+  font-family: arial;
+  font-size: 16px;
+  color: green;
+  text-align: center;
+}
+      
+/* ------------------------------ Media Queries ------------------------------ *
+*                                                                           *
+*           Mobile screen size:             1000px                          *
+*           Tablet screen size:             750px                           *
+*           Computer screen size:           600px                           *
+* ---------------------------------------------------------------------------- */
+
+/*  If the screen is a minimum width of 750px wide: */
+@media only screen and (min-width: 750px) {
+/*  Makes topnav links and log in form visible  */
+    .topnav a:not(:first-child) {
+        display:            flex;
+    }
+    .topnav .header-login {
+        display:            flex;
+    }
+    
+/*  Formats topnav so links are on the left, log in on the right */
+    .topnav {
+        width:              calc(100% - 30px);
+        height:             60px;
+        padding:            0 15px;
+        background-color:   #FFF;
+        display:            flex;
+        flex-direction:     row;
+        justify-content:    space-between;
+        align-items:        center;
+    }
+    .nav-header-main {
+      height:               80%;
+      display:              flex;
+      flex-direction:       row;
+    }
+    .nav-header-main a {
+      display:              block;
+      height:               100%;
+      padding:              0 10px;
+      border-radius:        6px;
+      line-height:          48px;
+      font-family:          arial;
+      font-size:            16px;
+      color:                #111;
+      text-transform:       uppercase;
+    }
+
+/*  Formats log in of topnav  */
+    .header-login {
+      height:               60%;
+      display:              flex;
+      flex-direction:       row;
+    }
+    
+    .header-login form {
+      height:               100%;
+    }
+    
+    .header-login form input {
+      height:               100%;
+      width:                160px;
+      padding:              0 15px;
+      border:               none;
+      border-radius:        4px;
+      background-color:     #F6F6F6;
+      float:                left;
+      margin-left:          8px;
+      font-family:          arial;
+    }
+    
+    .header-login form button {
+      height:               100%;
+      padding:              0 10px;
+      border:               none;
+      border-radius:        4px;
+      background-color:     #333;
+      margin-left:          8px;
+      font-family:          arial;
+      font-size:            13px;
+      color:                #FFF;
+      text-transform:       uppercase;
+      text-align:           center;
+    }   
+
+    
+/* ---- Formats burger icon portion of header menu ---- */
+    .burgerIcon {
+        display:                none;
+    }
+
+}
